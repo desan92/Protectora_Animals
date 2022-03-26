@@ -1,0 +1,77 @@
+.div_spacer{
+    margin-top: 75px;
+}
+
+#photo{
+    background: url(../../assets/img/dog_jumbotron.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 350px;
+    width: 100%;
+    text-align: center;
+}
+
+#photo span {
+    font-size: 45px;
+    color: #fff;
+    position: relative;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: black 0.1em 0.1em 0.2em;
+}
+
+.jumbotron{
+    margin-bottom: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: rgba(0,0,0,0.4);
+}
+
+#titol{
+	padding: 45px;
+	text-align: center;
+	color: #099a94;
+}
+
+#titol_gossos{
+    padding: 45px;
+	color: #099a94;
+}
+
+#info_general{
+	padding: 0px 45px;
+	line-height: 20px;
+	text-align: justify;
+}
+
+#div_info_gos a{
+    text-decoration: none;
+}
+
+#nom_gos{
+    color: #099a94;
+    background-color: gold;
+    text-align: center;
+    border: 3px solid #099a94;
+    border-bottom: none;
+    margin: 0;
+}
+
+#img_gossos{
+    border: 2px solid #099a94;
+    height: 200px;
+    width: 100%;
+}
+
+#div_info_gos a:hover #nom_gos{
+    color: gold;
+    background-color: #099a94;
+}
+
+#div_info_gos a:hover #img_gossos{
+    border: 2px solid #099a94;
+    filter: brightness(75%);
+}

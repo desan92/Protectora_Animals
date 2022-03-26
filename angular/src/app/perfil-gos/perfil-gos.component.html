@@ -1,0 +1,29 @@
+<div class="div_spacer"></div>
+<div class="container-fluid" id="jumbo">
+    <div class="row">
+      <div class="col p-0">
+          <div class="jumbotron jumbotron-fluid" id="photo" *ngFor="let gos of gos">
+              <span class="prova">{{gos.nom}}<h3 class="" id="text_actiu"></h3></span>
+          </div>
+      </div>
+  </div>
+</div>
+<div class="div_spacer"></div>
+<div class="container">
+    <div id="div_gos" class="row justify-content-center" *ngFor="let gos of gos">
+        <div class="col-md-6">
+            <img id="img_gos" class="img-fluid" [src]="'../../assets/img/' + gos.imatge" alt="">
+        </div>
+        <div id="info_gos" class="col-md-6">
+            <p><b>Nom: </b> {{ gos.nom }}</p>
+            <p><b>Raça: </b> {{ gos.raza }}</p>
+            <p><b>Sexe: </b> {{ gos.sexe }}</p>
+            <p><b>Tamany: </b> {{ gos.tamany }}</p><p *ngIf="gos.esterelitzat === 0"><b>Esterelitzat: </b> No</p>
+            <p *ngIf="gos.esterelitzat === 1"><b>Esterelitzat: </b> Si</p>
+            <p *ngIf="gos.vacunat === 0"><b>Vacunat: </b> No</p>
+            <p *ngIf="gos.vacunat === 1"><b>Vacunat: </b> Si</p>
+            <p><b>Descripció: </b> {{ gos.informacio }}</p>
+        </div>
+    </div>
+</div>
+<div class="div_spacer"></div>

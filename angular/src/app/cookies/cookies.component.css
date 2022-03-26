@@ -1,0 +1,53 @@
+.div_spacer{
+    margin-top: 75px;
+}
+
+.container_cookies{
+    padding: 5%;
+    line-height: 26px;
+}
+.container_cookies .row{
+    padding: 2%;
+    border-radius: 3px;
+    background-color: white !important;
+}
+
+.container_cookies p{
+    text-align: justify;
+}
+
+#icon_cookies{
+    color: #47ff5d;
+}
+
+#bold_info{
+    color: #099a94;
+}
+
+#photo{
+    background: url(../../assets/img/dog_jumbotron_1.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 350px;
+    width: 100%;
+    text-align: center;
+}
+
+#photo span {
+    font-size: 45px;
+    color: #fff;
+    position: relative;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: black 0.1em 0.1em 0.2em;
+}
+
+.jumbotron{
+    margin-bottom: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: rgba(0,0,0,0.4);
+}

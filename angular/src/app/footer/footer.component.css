@@ -1,0 +1,40 @@
+
+#footer{
+    background: #099a94 none repeat scroll 0 0;
+    clear: both;
+    color: white;
+    border-bottom-color: white;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#footer_copy{
+    background: #099a94 none repeat scroll 0 0;
+    clear: both;
+    color: white;
+    border-bottom-color: white;
+}
+
+#list_footer li a{
+    text-decoration: none;
+}
+
+
+footer{
+    padding: 0px !important;
+}
+
+#foot_div{
+    padding: 0px !important;
+}
+
+#photo_footer{
+    height: 150px;
+    width: 150px;
+}
+
+#link_footer{
+    color: white;
+    text-decoration: none;
+}

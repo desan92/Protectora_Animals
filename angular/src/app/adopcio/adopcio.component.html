@@ -1,0 +1,78 @@
+<div class="div_spacer"></div>
+<div class="container-fluid" id="jumbo">
+    <div class="row">
+      <div class="col p-0">
+          <div class="jumbotron jumbotron-fluid" id="photo">
+              <span class="prova">Adopcions<h3 class="" id="text_actiu"></h3></span>
+          </div>
+      </div>
+  </div>
+</div>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col col-12" id="titol">
+            <h2><b>TOT EL QUE NECESSITES SABER PER ADOPTAR UN ANIMAL</b></h2>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col col-12">
+            <p id="info_general">L'adopció, en terminologia de normativa, és una cessió de la custòdia de 
+                l'animal per part de l'Associació Protectora a l'adoptant. Per tant, 
+                l'Associació Protectora té dret de fer-ne un seguiment i l'adoptant no 
+                hi ha de posar impediments.
+            </p><br>
+            <p id="info_general">
+                L'adopció de l'animal comporta abonar les taxes estipulades en concepte 
+                d'adopció i rebre l'animal desparasitat interna i externament, vacunat 
+                (Polivalent, que inclou la ràbia, per adults i, Tetravalent, Parvovirus 
+                i “tos de les gosseres” per cadells), identificat (identificació 
+                electrònica amb la implantació d'un microxip homologat ) i, si és un 
+                adult, esterilitzat. La vacunació té una gran importancia, protegim al 
+                nostre animal de companyia de malalties d'origen bacterià i víric que es 
+                troben molt presents en la nostra societat.En cas que l'animal adoptat 
+                sigui un cadell o que per motius de salut no ha pogut ser esterilitzat, 
+                haurà de ser traslladat al centre dins el termini de 6 mesos després de 
+                la data d'adopció per practicar-li l'esterilització, sense cap més despesa.
+            </p><br>
+            <p id="info_general">
+                Si l'animal adoptat es posa malalt durant el periòde de vuit dies després
+                 de la data d'adopció, es pot tornar al centre per evaluar les 
+                 possibilitats d'èxit en el tractament o l'opció d'adoptar un altre animal 
+                 i/o fer el reemborsament de les taxes abonades. L'Associació protectora 
+                 no es pot fer responsable de malalties congènites, adquirides o 
+                 hereditàries que es presentin més enllà de vuit dies després de l'adopció.
+            </p>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col col-12" id="titol_gossos">
+            <h4><b>Gossos per adoptar: </b></h4>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-4 col-sm-6 mb-4" id="div_info_gos" *ngFor="let gos of gossos">
+            <a [routerLink]="['/PerfilGos/' + gos.id]">
+                <h4 id="nom_gos"><b>{{ gos.nom }}</b></h4>
+                <img class="img-fluid" id="img_gossos" [src]="'../../assets/img/' + gos.imatge" alt="">
+            </a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12" id="">
+            <nav aria-label="Page navigation example">
+                <ul class="pagination justify-content-end">
+                  <li class="page-item">
+                    <a class="page-link" id="previous" aria-label="Previous" (click)="paginationPreviousGossos()">
+                      <span aria-hidden="true">Anterior</span>
+                    </a>
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link" id="next" aria-label="Next" (click)="paginationNextGossos()">
+                      <span aria-hidden="true">Pròxim</span>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+        </div>
+    </div>
+</div>

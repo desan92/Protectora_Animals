@@ -1,0 +1,81 @@
+<div class="div_spacer"></div>
+<div class="container-fluid" id="jumbo">
+    <div class="row">
+      <div class="col p-0">
+          <div class="jumbotron jumbotron-fluid" id="photo">
+              <span class="prova">Gossos Trobats<h3 class="" id="text_actiu"></h3></span>
+          </div>
+      </div>
+  </div>
+</div>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col col-12" id="titol">
+            <h2><b>TOT EL QUE NECESSITES SABER PER ADOPTAR UN ANIMAL</b></h2>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col col-12">
+            <p id="info_general">El termini per la recuperació dels animals per part dels 
+                propietaris és de vint dies des de la data d'acollida, passat aquest 
+                termini es considera animal abandonat, i pot ser cedit, acollit temporalment 
+                o adoptat.
+            </p><br>
+            <p id="info_general">
+                La identificació de gossos i gats constitueix un requisit previ i 
+                obligatori per fer qualsevol transacció de l'animal, és a dir, en el 
+                retorn de l'animal al seu propietari s'ha de lliurar amb la 
+                identificació corresponent (identificació electrònica amb la implantació 
+                d'un microxip homologat) i amb el pagament previ de totes les despeses 
+                originades.
+            </p><br>
+            <p id="info_general">
+                És molt aconsellable el retorn de l'animal amb la vacuna corresponent, 
+                Polivalent per adults i, Tetravalent, Parvovirus i “tos de les gosseres” 
+                per cadells. La vacunació té una gran importancia si volem protegir al 
+                nostre animal de companyia d'enfermetats d'origen bacterià i víric que es 
+                troben molt presents en la nostra societat.
+            </p>
+            <p id="info_general">
+                En el cas de que el gos pertanyi a alguna de les següents races: 
+                akita inu, terrier staffordshire americà, bullmastif, dòberman, 
+                dog argentí, dog de bordeus, fila brasileiro, mastí napolità, 
+                pit bull terrier, presa canari, rotweiler, staffordshire bull terrier, 
+                tosa inu o japonès, o a llurs encreuaments el propietari ha de disposar 
+                o haurà d'obtenir la llicència per a la tinença i conducció de races 
+                perilloses.
+            </p>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col col-12" id="titol_gossos">
+            <h4><b>Gossos trobats: </b></h4>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-4 col-sm-6 mb-4" id="div_info_gos" *ngFor="let gos of gossos">
+            <a [routerLink]="['/PerfilGos/' + gos.id]">
+                <h4 id="nom_gos"><b>{{ gos.nom }}</b></h4>
+                <img class="img-fluid" id="img_gossos" [src]="'../../assets/img/' + gos.imatge" alt="">
+            </a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12" id="">
+            <nav aria-label="Page navigation example">
+                <ul class="pagination justify-content-end">
+                  <li class="page-item">
+                    <a class="page-link" id="previous" aria-label="Previous" (click)="paginationPreviousGossos()">
+                      <span aria-hidden="true">Anterior</span>
+                    </a>
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link" id="next" aria-label="Next" (click)="paginationNextGossos()">
+                      <span aria-hidden="true">Pròxim</span>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+        </div>
+    </div>
+</div>

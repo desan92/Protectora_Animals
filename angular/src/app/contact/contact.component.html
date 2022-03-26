@@ -1,0 +1,69 @@
+<div class="div_spacer"></div>
+<div class="container-fluid" id="jumbo">
+    <div class="row">
+      <div class="col p-0">
+          <div class="jumbotron jumbotron-fluid" id="photo">
+              <span class="prova">Contacte<h3 class="" id="text_actiu"></h3></span>
+          </div>
+      </div>
+  </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6" id="titol_contact">
+          <h2 class="text-center"><b>Contacte amb nosaltres</b></h2><br>
+          <p>
+              Si desitges concertar una visita o rebre més informació, amplena el formulari
+               que trobaras a continuació o pots trucarnos o enviar un email a les dades facilitades.
+          </p>
+          <p><b>Telefon:</b> 666666666</p>
+          <p><b>Email:</b>info@protectoraFigueres.cat</p>
+          <p><b>Direcció:</b> C/Nou, 9 - Figueres</p>
+          
+        </div>
+        <div class="col-lg-6" id="titol_contact">
+            <h2 class="text-center"><b>Formulari de contacte</b></h2><br>
+            <p>
+                Si desitges concertar una visita o rebre més informació, amplena el formulari.
+            </p>
+            <form (ngSubmit)="enviarEmail()" [formGroup]="form">
+                <div class="mb-3">
+                  <label for="nom" class="form-label"><b>Nom:</b></label>
+                  <input type="text" formControlName="nom" class="form-control" name="nom" id="nom" [(ngModel)]="contacte.nom" required>
+                  <div *ngIf="nom?.invalid && (nom?.dirty || nom?.touched)">
+                    <div *ngIf="nom?.errors?.['required']">
+                      <span class="error_form">Camp obligatori</span>
+                    </div>
+                    <div *ngIf="nom?.errors?.['minlength']">
+                      <span class="error_form">El nom te menys de dos caracters</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label for="email" class="form-label"><b>Email:</b></label>
+                  <input type="email" formControlName="email" class="form-control" id="email" [(ngModel)]="contacte.email">
+                  <div *ngIf="email?.invalid && (email?.dirty || email?.touched)">
+                    <div *ngIf="email?.errors?.['required']">
+                      <span class="error_form">Camp obligatori</span>
+                    </div>
+                    <div *ngIf="email?.errors?.['pattern']">
+                      <span class="error_form">L'email no te el format correcte</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label for="missatge" class="form-label"><b>Missatge:</b></label>
+                  <textarea class="form-control" formControlName="missatge" id="missatge" rows="3" [(ngModel)]="contacte.missatge"></textarea>
+                  <div *ngIf="missatge?.invalid && (missatge?.dirty || missatge?.touched)">
+                    <div *ngIf="missatge?.errors?.['required']">
+                      <span class="error_form">Camp obligatori</span>
+                    </div>
+                    <div *ngIf="missatge?.errors?.['minlength']">
+                      <span class="error_form">El missatge te menys de deu caracters</span>
+                    </div>
+                  </div>
+                </div>
+                <button type="submit" class="btn btn-warning float-end" [disabled]="!form.valid">Enviar</button>
+            </form>
+        </div>
+</div>

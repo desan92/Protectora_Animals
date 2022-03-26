@@ -1,0 +1,149 @@
+
+
+/* header home */
+
+#header_home {
+    background-image: url(../../assets/img/kid_dog.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+	height: 100vh;
+	width: 100%;
+}
+
+/* Qui som page */
+
+#qui_som{
+	position: relative;
+}
+
+#img_qui_som{
+	padding: 100px;
+}
+
+#info_qui_som{
+	padding: 100px;
+}
+
+#info_qui_som p{
+	position: relative;
+	text-align: justify !important;
+}
+
+#titol_qui_som{
+	padding-bottom: 5px;
+	margin-bottom: 20px;
+	color: #099a94;
+	border-bottom: 2px solid;
+	border-image: linear-gradient(to right, orange, gold) 1;
+	display: inline-block;
+}
+
+/* motivacio page */
+
+#motivacio{
+	position: relative;
+	/* padding: 0% !important; */
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+	
+}
+
+#img_motivacio{
+	background-image: url(../../assets/img/motivacio_dog.jpg);
+	background-repeat: no-repeat;
+    background-position: center right;
+    background-size: cover;
+	height: 100vh;
+	width: 100%;
+}
+
+#frase_motivacio{
+	margin: 0;
+	padding: 0;
+	color: white;
+	line-height: 60px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%);
+}
+#autor_motivacio{
+	margin: 0;
+	padding: 0;
+	color: white;
+	position: absolute;
+	top: 70%;
+	left: 70%;
+	transform: translateX(-70%) translateY(-70%);
+}
+
+
+/* adopcio page */
+
+#adopcio{
+	position: relative;
+}
+
+#info_adopcio{
+	padding: 100px 80px;
+	display: flex;
+	flex-wrap: wrap; /* fa que el dos elements es moguin en parsimonia */
+}
+
+#info_adopcio p{
+	position: relative;
+	text-align: justify !important;
+}
+
+.img_dog{
+	height: 50vh;
+	width: 50vh;
+}
+
+
+/* perdut page */
+
+#perdut{
+	position: relative;
+}
+
+#info_perdut{
+	padding: 100px;
+}
+
+#info_perdut p{
+	position: relative;
+	text-align: justify !important;
+}
+
+/* media querie */
+
+@media only screen and (max-width: 992px){
+
+	/* qui som */
+
+	#info_qui_som, #info_adopcio, #info_perdut{
+		padding: 20px;
+	}
+
+}
+
+@media only screen and (max-width: 768px){
+
+	/* motivacio */
+
+	#frase_motivacio{
+		line-height: 40px;
+	}
+}
+
+@media only screen and (max-width: 550px){
+
+	/* qui som */
+
+	#img_qui_som{
+		padding: 30px;
+	}
+}
